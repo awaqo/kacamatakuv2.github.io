@@ -51,9 +51,9 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 3,
-        slidesToScroll: 2,
-        prevArrow: $('.lg-prev'),
-        nextArrow: $('.lg-next')
+        slidesToScroll: 1,
+        prevArrow: $('.prev-lg'),
+        nextArrow: $('.next-lg')
       });
 
     $('.single-item').slick({

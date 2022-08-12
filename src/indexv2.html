@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,20 @@
     <link rel="stylesheet" href="assets/slick/slick.css">
     <link rel="stylesheet" href="assets/slick/slick-theme.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="./dist/style.css">
+
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
 </head>
+
 <body class="font-poppins">
     <div class="sticky top-0 w-full bg-gradient-to-r from-cyan-500 to-blue-500 z-40">
         <div class="max-w-8xl mx-auto">
@@ -31,7 +36,7 @@
                             <img src="assets/img/logo/logo.svg" class="h-16" alt="">
                         </a>
                     </div>
-            
+
                     <!-- navbar -->
                     <div class="relative hidden lg:flex items-center ml-auto">
                         <nav class="text-base text-white leading-6 font-semibold">
@@ -46,8 +51,57 @@
 
                     <!-- mobile-menu -->
                     <div class="ml-auto lg:hidden">
-                        <img src="assets/img/logo/fries-menu.svg" alt="">
+                        <div class="flex flex-wrap">
+                            <div class="w-full sm:w-6/12 md:w-4/12">
+                                <div class="relative inline-flex align-middle w-full">
+                                    <button
+                                        class="outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                        type="button" onclick="openDropdown(event,'dropdown-id')">
+                                        <img src="assets/img/logo/fries-menu.svg" alt="">
+                                    </button>
+                                    <div class="hidden bg-white  text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+                                        style="min-width:12rem" id="dropdown-id">
+                                        <a href="#masalah"
+                                            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">
+                                            Masalah
+                                        </a>
+                                        <a href="#produk"
+                                            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">
+                                            Produk
+                                        </a>
+                                        <a href="#promo"
+                                            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">
+                                            Promo
+                                        </a>
+                                        <a href="#testimoni"
+                                            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700">
+                                            Testimoni
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pop up -->
+    <div id="popup" class="hidden">
+        <div class="flex justify-end">
+            <div class="fixed z-10 flex mt-3 mr-2 items-center bg-yellow-500 text-white text-sm font-bold px-4 py-3" role="alert">
+                <div class="flex flex-row items-center gap-x-2 md:gap-x-10">
+                    <svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path
+                            d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z" />
+                    </svg>
+                    <p class="text-xs mbappe"></p>
+                    <button
+                        class="bg-transparent text-2xl font-semibold outline-none focus:outline-none"
+                        onclick="closeAlert()">
+                        <span>×</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -60,10 +114,13 @@
                     <img src="assets/img/hero-text-img.png" class="overflow-hidden w-full lg:w-[500px]" alt="">
                 </div>
                 <div class="mt-4 lg:mt-7 lg:w-[513px]">
-                    <p class="text-sm lg:text-lg text-center text-white tracking-[0.125rem] leading-snug">Dibuat dengan bahan berkualitas dengan model kekinian dan tentunya fashionable</p>
+                    <p class="text-sm lg:text-lg text-center text-white tracking-[0.125rem] leading-snug">Dibuat dengan
+                        bahan berkualitas dengan model kekinian dan tentunya fashionable</p>
                 </div>
                 <div class="mt-10">
-                    <a href="#" class="py-4 px-8 bg-yellow-400 hover:bg-yellow-500 rounded-md text-white font-semibold transition duration-150 ease-in-out">Lihat Promo</a>
+                    <a href="#promo"
+                        class="py-4 px-8 bg-yellow-400 hover:bg-yellow-500 rounded-md text-white font-semibold transition duration-150 ease-in-out">Lihat
+                        Promo</a>
                 </div>
             </div>
             <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
@@ -74,37 +131,47 @@
 
     <div class="bg-[#DBE9FF] py-10 px-4 lg:px-20 flex flex-col">
         <!-- MASALAH -->
-        <div class="mt-10 lg:mb-10 flex flex-col">
-            <div class="text-center text-3xl font-bold uppercase" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">Apakah Anda Mengalami</div>
+        <div id="masalah" class="mt-10 lg:mb-10 flex flex-col">
+            <div class="text-center text-3xl font-bold uppercase" data-aos="fade-up" data-aos-easing="ease-in-out"
+                data-aos-once="false">Apakah Anda Mengalami</div>
             <div class="mt-10 flex flex-col lg:flex-row gap-4 items-stretch">
-                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg"
+                    data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
                     <img src="assets/img/masalah/sakit-mata.png" alt="">
                     <p class="uppercase font-semibold text-lg mt-4">Sakit Mata</p>
-                    <p class="mt-2 mb-5 text-justify">Mulai dari iritasi, alergi, infeksi virus dan bakteri, hingga cedera mata</p>
+                    <p class="mt-2 mb-5 text-justify">Mulai dari iritasi, alergi, infeksi virus dan bakteri, hingga
+                        cedera mata</p>
                 </div>
-    
-                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+
+                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg"
+                    data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
                     <img src="assets/img/masalah/mata-merah.png" alt="">
                     <p class="uppercase font-semibold text-lg mt-4">Mata Merah</p>
-                    <p class="mt-2 mb-5 text-justify">Masuknya debu atau partikel asing ke dalam mata, infeksi, alergi, cedera, paparan sinar matahari, atau kondisi mata yang kering.</p>
+                    <p class="mt-2 mb-5 text-justify">Masuknya debu atau partikel asing ke dalam mata, infeksi, alergi,
+                        cedera, paparan sinar matahari, atau kondisi mata yang kering.</p>
                 </div>
-    
-                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+
+                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg"
+                    data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
                     <img src="assets/img/masalah/buram.png" alt="">
                     <p class="uppercase font-semibold text-lg mt-4">Penglihatan Buram</p>
-                    <p class="mt-2 mb-5 text-justify">Melihat benda disekitar kurang jelas dan menyebabkan sakit kepala dan pusing </p>
+                    <p class="mt-2 mb-5 text-justify">Melihat benda disekitar kurang jelas dan menyebabkan sakit kepala
+                        dan pusing </p>
                 </div>
-    
-                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+
+                <div class="w-full bg-white rounded-md py-4 px-5 flex flex-col flex-wrap items-center shadow-lg"
+                    data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
                     <img src="assets/img/masalah/blue-ray.png" alt="">
                     <p class="uppercase font-semibold text-lg mt-4">Terkena Sinar Blue Ray</p>
-                    <p class="mt-2 mb-5 text-justify">Yang disebabkan oleh radiasi dari layar handphone, laptop maupun televisi</p>
+                    <p class="mt-2 mb-5 text-justify">Yang disebabkan oleh radiasi dari layar handphone, laptop maupun
+                        televisi</p>
                 </div>
             </div>
         </div>
 
         <!-- SOLUSI -->
-        <div class="mt-10 lg:mb-10 flex flex-col" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+        <div id="produk" class="mt-10 lg:mb-10 flex flex-col" data-aos="fade-up" data-aos-easing="ease-in-out"
+            data-aos-once="false">
             <div class="mt-10 text-center text-3xl font-bold uppercase">Kami Punya Solusinya!</div>
             <div class="mt-5 text-center text-lg">Kacamata antiradiasi dengan kualitas bagus dan harga terjangkau</div>
             <div class="flex justify-center">
@@ -115,39 +182,40 @@
         </div>
 
         <!-- PROMO -->
-        <div class="mt-10 lg:mb-10 flex flex-col" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+        <div id="promo" class="mt-10 lg:mb-10 flex flex-col" data-aos="fade-up" data-aos-easing="ease-in-out"
+            data-aos-once="false">
             <div class="mt-10 text-center text-3xl font-bold uppercase">Promo Khusus Hari ini!</div>
             <!-- countdown -->
-            <div class="outside-wrapper mt-5 flex flex-row space-x-4 justify-center">
-                <div class="p-4">
-                    <h4 class="jam text-lg font-bold">--</h4>
+            <div class="outside-wrapper mt-5 flex flex-row flex-wrap space-x-3 justify-center">
+                <div class="bg-white rounded-lg py-2 px-5">
+                    <h4 class="jam text-lg font-bold text-center">--</h4>
+                    <p class="text-lg font-semibold">Jam</p>
                 </div>
-                <div class="py-4">
-                    <p class="text-lg font-semibold">:</p>
+
+                <div class="bg-white rounded-lg py-2 px-3">
+                    <h4 class="menit text-lg font-bold text-center">--</h4>
+                    <p class="text-lg font-semibold">Menit</p>
                 </div>
-                <div class="p-4">
-                    <h4 class="menit text-lg font-bold">--</h4>
-                </div>
-                <div class="py-4">
-                    <p class="text-lg font-semibold">:</p>
-                </div>
-                <div class="p-4">
-                    <h4 class="detik text-lg font-bold">--</h4>
+
+                <div class="bg-white rounded-lg py-2 px-4">
+                    <h4 class="detik text-lg font-bold text-center">--</h4>
+                    <p class="text-lg font-semibold">Detik</p>
                 </div>
             </div>
-            
+
             <div class="flex justify-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
-                <div class="lg:w-3/4 lg:-ml-10 -mt-10 lg:-mt-16">
+                <div class="lg:w-3/4 lg:-ml-10 -mt-2 lg:-mt-16">
                     <img src="assets/img/promo/title.png" alt="">
                 </div>
             </div>
 
             <div class="mt-5 lg:mt-16" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
-                <h2 class="text-2xl lg:text-6xl text-center font-black uppercase text-white zz">Beli <span class="ml-3 mr-2">1</span> Gratis <span class="ml-2">1</span></h2>
+                <h2 class="text-2xl lg:text-6xl text-center font-black uppercase text-white zz">Beli <span
+                        class="ml-3 mr-2">1</span> Gratis <span class="ml-2">1</span></h2>
                 <h2 class="text-xl lg:text-5xl text-center font-black uppercase text-white zz">Hanya Rp 99.000</h2>
                 <!-- button beli sekarang -->
                 <div class="mt-5 lg:mt-16 flex justify-center">
-                    <a href="#" class="py-3 px-14 lg:py-5 lg:w-96 lg:text-xl text-center rounded-md bg-blue-900 hover:bg-blue-800 text-white font-semibold">Beli Sekarang</a>
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=6289677464708&text=Hallo%20saya%20ingin%20membeli%20kacamata" class="py-3 px-14 lg:py-5 lg:w-96 lg:text-xl text-center rounded-md bg-blue-900 hover:bg-blue-800 text-white font-semibold">Beli Sekarang</a>
                 </div>
             </div>
         </div>
@@ -155,7 +223,8 @@
         <!-- ALASAN -->
         <div class="mt-20">
             <!-- title -->
-            <div class="flex flex-col items-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+            <div class="flex flex-col items-center" data-aos="fade-up" data-aos-easing="ease-in-out"
+                data-aos-once="false">
                 <h2 class="text-3xl text-center uppercase font-bold">Kenapa Harus Beli di Kacamataku?</h2>
                 <div class="invisible lg:visible w-28 -ml-[220px]">
                     <img src="assets/img/line.svg" class="" alt="">
@@ -168,48 +237,59 @@
                 </div>
                 <div class="gap-5 md:ml-10 flex flex-col justify-center md:w-2/3">
                     <!-- alasan list -->
-                    <div class="flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+                    <div class="flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up"
+                        data-aos-easing="ease-in-out" data-aos-once="false">
                         <div class="w-[111px] ">
                             <img src="assets/img/alasan-beli/3d-fluency-number-one.svg" alt="">
                         </div>
-                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Setiap pembelian 1 kacamata mendapatkan box  dan kain micro fiber (kain pembersih kacamata)</p>
+                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Setiap pembelian 1
+                            kacamata mendapatkan box dan kain micro fiber (kain pembersih kacamata)</p>
                     </div>
 
-                    <div class="flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+                    <div class="flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up"
+                        data-aos-easing="ease-in-out" data-aos-once="false">
                         <div class="w-[111px] ">
                             <img src="assets/img/alasan-beli/uang-kembali.svg" alt="">
                         </div>
-                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Jaminan uang kembali 100% ketika barang tidak sampai</p>
+                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Jaminan uang kembali
+                            100% ketika barang tidak sampai</p>
                     </div>
 
-                    <div class="flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+                    <div class="flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up"
+                        data-aos-easing="ease-in-out" data-aos-once="false">
                         <div class="w-[111px] ">
                             <img src="assets/img/alasan-beli/casual-life-3d-two-sale-tags.svg" alt="">
                         </div>
-                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Banyak promo pembelian disetiap minggunya</p>
+                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Banyak promo pembelian
+                            disetiap minggunya</p>
                     </div>
 
-                    <div class="mt-5 flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+                    <div class="mt-5 flex flex-row flex-wrap gap-x-3 justify-center items-center" data-aos="fade-up"
+                        data-aos-easing="ease-in-out" data-aos-once="false">
                         <div class="w-[111px] ">
                             <img src="assets/img/alasan-beli/business-3d-side-view-of-black-eyeglasses.svg" alt="">
                         </div>
-                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Bentuk dan desainnya cocok untuk semua kalangan</p>
+                        <p class="font-semibold text-center lg:text-left max-w-xs lg:w-[570px]">Bentuk dan desainnya
+                            cocok untuk semua kalangan</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- TESTIMONI -->
-        <div class="mt-20">
-            <div class="flex flex-col items-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="false">
+        <div id="testimoni" class="mt-20">
+            <div class="flex flex-col items-center" data-aos="fade-up" data-aos-easing="ease-in-out"
+                data-aos-once="false">
                 <h2 class="text-center uppercase text-3xl font-bold">Testimoni</h2>
                 <!-- btn pagination sm -->
                 <div class="md:hidden mt-5 md:mt-10">
                     <div class="flex flex-row justify-center gap-1">
-                        <div class="prev py-2 pr-6 pl-8 rounded-l-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-l hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
+                        <div
+                            class="prev py-2 pr-6 pl-8 rounded-l-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-l hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
                             <span><i class="fa-solid fa-arrow-left"></i></span>
                         </div>
-                        <div class="next py-2 pl-6 pr-8 rounded-r-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
+                        <div
+                            class="next py-2 pl-6 pr-8 rounded-r-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
                             <span><i class="fa-solid fa-arrow-right"></i></span>
                         </div>
                     </div>
@@ -218,10 +298,12 @@
                 <!-- btn pagination md-xl -->
                 <div class="hidden md:block mt-5 md:mt-10">
                     <div class="flex flex-row justify-center gap-1">
-                        <div class="prev-lg py-2 pr-6 pl-8 rounded-l-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-l hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
+                        <div
+                            class="prev-lg py-2 pr-6 pl-8 rounded-l-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-l hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
                             <span><i class="fa-solid fa-arrow-left"></i></span>
                         </div>
-                        <div class="next-lg py-2 pl-6 pr-8 rounded-r-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
+                        <div
+                            class="next-lg py-2 pl-6 pr-8 rounded-r-xl bg-white border-2 border-blue-500 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
                             <span><i class="fa-solid fa-arrow-right"></i></span>
                         </div>
                     </div>
@@ -251,25 +333,30 @@
                 <div class="mt-5 w-3/4 hidden md:block">
                     <div class="flex flex-row flex-wrap justify-center multiple-items">
                         <div class="ml-8">
-                            <img src="assets/img/testimoni/testi1.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]" alt="">
+                            <img src="assets/img/testimoni/testi1.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]"
+                                alt="">
                         </div>
                         <div class="ml-8">
-                            <img src="assets/img/testimoni/testi2.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]" alt="">
+                            <img src="assets/img/testimoni/testi2.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]"
+                                alt="">
                         </div>
                         <div class="ml-8">
-                            <img src="assets/img/testimoni/testi3.jpeg" class="rounded-lg lg:h-[600px] md:h-[400px]" alt="">
+                            <img src="assets/img/testimoni/testi3.jpeg" class="rounded-lg lg:h-[600px] md:h-[400px]"
+                                alt="">
                         </div>
                         <div class="ml-8">
-                            <img src="assets/img/testimoni/testi4.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]" alt="">
+                            <img src="assets/img/testimoni/testi4.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]"
+                                alt="">
                         </div>
                         <div class="ml-8">
-                            <img src="assets/img/testimoni/testi5.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]" alt="">
+                            <img src="assets/img/testimoni/testi5.jpg" class="rounded-lg lg:h-[600px] md:h-[400px]"
+                                alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- METODE BAYAR -->
         <div class="w-full pt-20 pb-16">
             <div class="flex flex-col items-center">
@@ -293,10 +380,11 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
 </body>
+
 </html>

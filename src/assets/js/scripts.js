@@ -79,18 +79,6 @@ function openDropdown(event,dropdownID){
   }
 
 // popup
-var popupMessages = ["Kylian Mbappé sedang membeli", "Halaand Bakery sedang membeli", "Ronaldo sedang membeli", "Lionel Messi sedang membeli"];
-
-$(function() { 
-    setInterval(function() {
-        if (popupMessages.length > 0) {
-            document.querySelector(".mbappe").innerText = popupMessages.shift();
-            popupMessages.push("Harry Maguire sedang membeli", "Haji Salah sedang membeli", "Sadio Mane sedang membeli", "Kylian Mbappé sedang membeli", "Halaand Bakery sedang membeli", "Ronaldo sedang membeli", "Lionel Messi sedang membeli");
-        }
-        $("#popup").fadeIn().delay(10000).fadeOut();
-    }, 20000);
-})
-
 function closeAlert(){
     var x = document.getElementById("popup");
     if (x.style.display === "none") {
@@ -100,19 +88,30 @@ function closeAlert(){
     }
   }
 
-// SCROLL TO TOP
-$(document).ready(function () {
-    var elScroll = document.getElementById("scroll");
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 500) {
-            elScroll.classList.add("d-flex");
-            $('.scrollToTop').fadeIn();
-        } else {
-            elScroll.classList.remove("d-flex");
-            $('.scrollToTop').fadeOut();
+// $(function() {
+//     showPopup();
+// }) 
+
+var popupTime = ["1 jam yang lalu", "32 menit yang lalu", "1 jam yang lalu", "21 menit yang lalu"];
+var popupMessages = ["Irma Rahmawati sudah membeli", "Rizki Agung Permadana sudah membeli", "Ismanto sudah membeli", "Rahadian sudah membeli"];
+var popupLoc = ["Semarang, Jawa Tengah", "Purwakarta, Jawa Barat", "Surabaya, Jawa Timur", "Tegal, Jawa Tengah"];
+
+function showPopup() { 
+    setInterval(function() {
+        if (popupMessages.length > 0) {
+            document.querySelector(".popupTime").innerText = popupTime.shift();
+            document.querySelector(".popupMessage").innerText = popupMessages.shift();
+            document.querySelector(".popupLoc").innerText = popupLoc.shift();
+            popupTime.push("2 jam yang lalu", "12 menit yang lalu", "1 jam yang lalu", "22 menit yang lalu", "47 menit yang lalu", "52 menit yang lalu", "1 jam yang lalu");
+            popupMessages.push("Yunida Ayu sudah membeli", "Wahyu Pratama sudah membeli", "Zidan Nugroho sudah membeli", "Rian sudah membeli", "Alifian Akmal sudah membeli", "Septianingrum sudah membeli", "Sandy Gustyanto sudah membeli");
+            popupLoc.push("Bantul, Yogyakarta", "Medan, Sumatera Utara", "Garut, Jawa Barat", "Banyuwangi, Jawa Timur", "Solo, Jawa Tengah", "Batang, Jawa Tengah", "Pemalang, Jawa Tengah");
         }
-    });
-    $('.scrollToTop').click(function () {
-        $('html,body').animate({ scrollTop: 0 }, 0);
-    })
-});
+        $("#popup").fadeIn().delay(5000).fadeOut();
+    }, 20000);
+}
+$(function() {
+    showPopup();
+}) 
+// $("#popup").fadeOut(function(){
+//     showPopup();
+// })

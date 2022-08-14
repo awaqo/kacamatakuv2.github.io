@@ -88,10 +88,6 @@ function closeAlert(){
     }
   }
 
-// $(function() {
-//     showPopup();
-// }) 
-
 var popupTime = ["1 jam yang lalu", "32 menit yang lalu", "1 jam yang lalu", "21 menit yang lalu"];
 var popupMessages = ["Irma Rahmawati sudah membeli", "Rizki Agung Permadana sudah membeli", "Ismanto sudah membeli", "Rahadian sudah membeli"];
 var popupLoc = ["Semarang, Jawa Tengah", "Purwakarta, Jawa Barat", "Surabaya, Jawa Timur", "Tegal, Jawa Tengah"];
@@ -104,7 +100,7 @@ function showPopup() {
             document.querySelector(".popupLoc").innerText = popupLoc.shift();
             popupTime.push("2 jam yang lalu", "12 menit yang lalu", "1 jam yang lalu", "22 menit yang lalu", "47 menit yang lalu", "52 menit yang lalu", "1 jam yang lalu");
             popupMessages.push("Yunida Ayu sudah membeli", "Wahyu Pratama sudah membeli", "Zidan Nugroho sudah membeli", "Rian sudah membeli", "Alifian Akmal sudah membeli", "Septianingrum sudah membeli", "Sandy Gustyanto sudah membeli");
-            popupLoc.push("Bantul, Yogyakarta", "Medan, Sumatera Utara", "Garut, Jawa Barat", "Banyuwangi, Jawa Timur", "Solo, Jawa Tengah", "Batang, Jawa Tengah", "Pemalang, Jawa Tengah");
+            popupLoc.push("Bantul, Yogyakarta", "Medan, Sumatera Utara", "Garut, Jawa Barat", "Jakarta Utara, Jakarta", "Bekasi, Jawa Barat", "Jakarta Timur, Jakarta", "Banyuwangi, Jawa Timur");
         }
         $("#popup").fadeIn().delay(5000).fadeOut();
     }, 20000);
@@ -112,6 +108,3 @@ function showPopup() {
 $(function() {
     showPopup();
 }) 
-// $("#popup").fadeOut(function(){
-//     showPopup();
-// })
